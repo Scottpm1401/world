@@ -1,0 +1,59 @@
+@import "variables.css";
+@import "Navbar.css";
+@import "Home.css";
+@import "Nation.css";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: var(--Background);
+  color: var(--Text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--Input);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  background: var(--Elements);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1113px) {
+  .container {
+    width: 980px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 330px;
+  }
+}

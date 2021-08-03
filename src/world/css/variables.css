@@ -1,0 +1,13 @@
+.light {
+  --Elements: hsl(0, 0%, 100%);
+  --Background: hsl(0, 0%, 98%);
+  --Text: rgb(17, 21, 23);
+  --Input: hsl(0, 0%, 52%);
+}
+
+.dark {
+  --Elements: hsl(209, 23%, 22%);
+  --Background: hsl(207, 26%, 17%);
+  --Text: hsl(0, 0%, 100%);
+  --Input: hsl(0, 0%, 100%);
+}

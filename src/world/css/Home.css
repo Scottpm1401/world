@@ -1,0 +1,133 @@
+.top {
+  padding: 48px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_bar {
+  background: var(--Elements);
+  width: 480px;
+  border: 0.25rem;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.search_form {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search_content {
+  width: 100%;
+  border: none;
+  border-radius: 0.25px;
+  color: var(--Input);
+  background: inherit;
+}
+
+.search_content:focus {
+  outline: none;
+}
+
+.select_crl {
+  padding: 1rem;
+  background: var(--Elements);
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--Text);
+}
+
+.nations_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.nations {
+  border-radius: 0.5rem;
+  background: var(--Elements);
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.nations:hover {
+  box-shadow: 5px 0px 7px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nations_flag {
+  width: 100%;
+  object-fit: cover;
+  height: 160px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.nations_content {
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+
+.nations_content p {
+  line-height: 2;
+  color: var(--Input);
+}
+
+.nations_content p span {
+  font-weight: 600;
+  color: var(--Text);
+}
+
+.nations_name {
+  margin: 1rem 0;
+  color: var(--Text);
+}
+
+@media screen and (max-width: 1113px) {
+  .search_bar {
+    width: 370px;
+  }
+
+  .select_crl {
+    width: 200px;
+  }
+
+  .nations_list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .search_bar {
+    width: 600px;
+  }
+
+  .select_crl {
+    width: 350px;
+    margin-top: 2rem;
+  }
+
+  .nations_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .search_bar {
+    width: 330px;
+  }
+
+  .select_crl {
+    width: 250px;
+  }
+
+  .nations_list {
+    grid-template-columns: 1fr;
+  }
+}

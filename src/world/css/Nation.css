@@ -1,0 +1,91 @@
+.btn_crl {
+  margin: 2rem 0;
+}
+
+.back_btn {
+  display: flex;
+  align-items: center;
+  width: 136px;
+}
+
+.back_text {
+  margin-left: 0.5rem;
+}
+
+.nation {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 0 2rem;
+}
+
+.nation_content {
+  margin: 2rem 0;
+}
+
+.nation_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.nation_info p span {
+  font-weight: 600;
+  color: var(--Text);
+}
+
+.nation_info p {
+  line-height: 2;
+  color: var(--Input);
+}
+
+.nation_name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.nation_border {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.nation_border span {
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.nation_flag {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+
+.border_btn:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.loader_crl {
+  display: block;
+  width: 100px;
+  height: 200px;
+  margin: auto;
+}
+
+.loader {
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (max-width: 450px) {
+  .nation {
+    grid-template-columns: 1fr;
+  }
+
+  .nation_flag {
+    height: 220px;
+  }
+
+  .nation_info {
+    grid-template-columns: 1fr;
+  }
+}
