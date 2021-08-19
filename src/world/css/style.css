@@ -34,6 +34,22 @@ a {
   box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.5);
 }
 
+.loader_crl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 400px;
+  margin: auto;
+}
+
+.loading {
+  margin: auto;
+  background: inherit;
+  display: block;
+  shape-rendering: auto;
+}
+
 @media screen and (max-width: 1113px) {
   .container {
     width: 980px;

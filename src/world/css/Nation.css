@@ -47,11 +47,13 @@
 .nation_border {
   display: flex;
   margin-top: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .nation_border span {
   font-weight: 600;
-  margin-right: 1rem;
 }
 
 .nation_flag {
@@ -59,28 +61,13 @@
   object-fit: cover;
   height: 400px;
 }
-
-.border_btn:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.loader_crl {
-  display: block;
-  width: 100px;
-  height: 200px;
-  margin: auto;
-}
-
-.loader {
-  height: 100px;
-  width: 100px;
-}
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 835px) {
   .nation {
     grid-template-columns: 1fr;
   }
+}
 
+@media screen and (max-width: 450px) {
   .nation_flag {
     height: 220px;
   }

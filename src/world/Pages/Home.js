@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import { Link } from "react-router-dom";
 import Axios from "axios";
+import Loading from "../../components/Loading";
 
 function Home(props) {
   const [nations, setNations] = useState([]);
@@ -33,7 +34,7 @@ function Home(props) {
   };
 
   return (
-    <>
+    <React.Fragment>
       <div className="top container">
         <div className="search_bar">
           <form className="search_form">
@@ -61,36 +62,40 @@ function Home(props) {
           <option value="Oceania">Oceania</option>
         </select>
       </div>
-      <section className="nations_list container">
-        {nations.map((nation) => {
-          const { name, population, flag, capital, region } = nation;
-          return (
-            <Link
-              to={`/nation/${name.toLowerCase()}`}
-              className="nations"
-              key={name}
-            >
-              <img className="nations_flag" src={flag} alt={name} />
-              <div className="nations_content">
-                <h2 className="nations_name">{name}</h2>
-                <p>
-                  <span>Population: </span>
-                  {population}
-                </p>
-                <p>
-                  <span>Region: </span>
-                  {region}
-                </p>
-                <p>
-                  <span>Capital: </span>
-                  {capital}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
-      </section>
-    </>
+      {nations.length > 0 ? (
+        <section className="nations_list container">
+          {nations.map((nation) => {
+            const { name, population, flag, capital, region } = nation;
+            return (
+              <Link
+                to={`/nation/${name.toLowerCase()}`}
+                className="nations"
+                key={name}
+              >
+                <img className="nations_flag" src={flag} alt={name} />
+                <div className="nations_content">
+                  <h2 className="nations_name">{name}</h2>
+                  <p>
+                    <span>Population: </span>
+                    {population}
+                  </p>
+                  <p>
+                    <span>Region: </span>
+                    {region}
+                  </p>
+                  <p>
+                    <span>Capital: </span>
+                    {capital}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </section>
+      ) : (
+        <Loading />
+      )}
+    </React.Fragment>
   );
 }
 
